@@ -15,22 +15,26 @@ for ($i=0; $i <count($ArrayNumeros); $i++) {
 
 	if ( $ArrayNumeros[$i] >= 0) 
 	{
-	 $ArrayPositivo[] = $ArrayNumeros[$i] ;
+	 $ArrayPositivo[] = $ArrayNumeros[$i];
+	 $SumaPositivo += $ArrayNumeros[$i]; 
 	}
 	else {
-	   $ArrayNegativo[] = $ArrayNumeros[$i] ;
+	   $ArrayNegativo[] = $ArrayNumeros[$i];
+	   $SumaNegativo += $ArrayNumeros[$i];
 	}
 }
 
 	echo "<P> NÚMEROS POSITIVOS </P>";
-for ($i=0; $i <count($ArrayPositivo) ; $i++) { 
+for ($i=0; $i <count($ArrayPositivo); $i++) { 
 	echo $ArrayPositivo[$i];
 	echo "<br>"; 
 }
+echo "<br> LA SUMA DE LOS POSITIVOS ES: $SumaPositivo <br>";
 
 	echo "<P> NÚMEROS NEGATIVOS </P> ";
-for ($i=0; $i <count($ArrayNegativo) ; $i++) { 
-	echo $ArrayNegativo[$i] ;
+for ($i=0; $i <count($ArrayNegativo); $i++) { 
+	echo $ArrayNegativo[$i];
 	echo "<br>"; 
 }
+echo "<br> LA SUMA DE LOS NEGATIVOS ES: $SumaNegativo <br>";
 ?>
