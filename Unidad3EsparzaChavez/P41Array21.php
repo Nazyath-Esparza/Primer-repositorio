@@ -12,7 +12,7 @@
    3°A Programación Matutino
 */
 
-$Compras=array(800,2700,1900,150,7600,1000);
+$Compras=array(800,2700,1900,150,7600,1000,);
 $Descuentos=array();
 $Total=array();
 $Porcentaje=array();
@@ -21,7 +21,10 @@ foreach ($Compras as $Compra) {
    $descuento=0;
    $porcentaje=0;
 
-   if ($Compra>300 && $Compra<=1000) {
+     if ($Compra<300){
+       $descuento=$Compra*0;
+       $porcentaje=0;
+   }elseif($Compra>300 && $Compra<=1000) {
        $descuento=$Compra*0.10;
        $porcentaje=10;
    } elseif ($Compra>1000 && $Compra<=2500) {
